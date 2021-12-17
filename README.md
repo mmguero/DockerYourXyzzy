@@ -15,7 +15,7 @@ Get your Xyzzy on: `docker pull emcniece/dockeryourxyzzy`
 
 # What is Docker Your Xyzzy?
 
-This is a containerized build of the [Pretend You're Xyzzy](https://github.com/ajanata/PretendYoureXyzzy) Cards Against Humanity clone.
+This is a containerized build of my fork of the [Pretend You're Xyzzy](https://github.com/mmguero/PretendYoureXyzzy) Cards Against Humanity clone.
 
 > ⚠ Version 3 (April 2020) is a vastly simplified Docker image, may break if upgrading from version 2. It no longer features multi-step builds.
 
