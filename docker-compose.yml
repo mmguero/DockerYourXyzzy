@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   pyx:
-    image: emcniece/dockeryourxyzzy:latest
+    image: ghcr.io/mmguero/dockeryourxyzzy:latest
     build: ./
     ports:
      - "8080:8080"

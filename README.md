@@ -1,11 +1,10 @@
 # Docker Your Xyzzy
 
-![docker publish](https://github.com/emcniece/DockerYourXyzzy/workflows/Publish%20Docker/badge.svg)
+![docker publish](https://github.com/mmguero/DockerYourXyzzy/workflows/Publish%20Docker/badge.svg)
 
-Get your Xyzzy on: `docker pull emcniece/dockeryourxyzzy`
+Get your Xyzzy on: `docker pull ghcr.io/mmguero/dockeryourxyzzy`
 
-- Github: [emcniece/DockerYourXyzzy](https://github.com/emcniece/DockerYourXyzzy)
-- Docker Hub: [emcniece/dockeryourxyzzy](https://hub.docker.com/r/emcniece/dockeryourxyzzy/)
+- Github: [mmguero/DockerYourXyzzy](https://github.com/mmguero/DockerYourXyzzy)
 
 
 # Supported tags and respective `Dockerfile` links:
@@ -48,7 +47,7 @@ Keep the container up with SQLite and `war:exploded jetty:run`:
 docker run -d \
   -p 8080:8080 \
   --name pyx-dev \
-  emcniece/dockeryourxyzzy:latest
+  ghcr.io/mmguero/dockeryourxyzzy:latest
 
 # Visit http://localhost:8080 in your browser
 # Or, start a bash session within the container:
@@ -63,7 +62,7 @@ Settings in `build.properties` can be modified by passing them in the container 
 ```sh
 docker run -d \
   -p 8080:8080 \
-  emcniece/dockeryourxyzzy:latest \
+  ghcr.io/mmguero/dockeryourxyzzy:latest \
   mvn clean package war:war \
     -Dhttps.protocols=TLSv1.2 \
     -Dmaven.buildNumber.doCheck=false \
@@ -76,7 +75,7 @@ Also are able to do more complex overrides by making a copy of [build.properties
 docker run -d \
   -p 8080:8080 \
   -v $(pwd)/build.properties:/overrides/build.properties \
-  emcniece/dockeryourxyzzy:latest
+  ghcr.io/mmguero/dockeryourxyzzy:latest
 ```
 
 

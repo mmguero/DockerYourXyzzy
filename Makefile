@@ -1,6 +1,6 @@
-# Builds emcniece/pretendyourexyzzy
+# Builds mmguero/pretendyourexyzzy
 
-NAMESPACE := emcniece
+NAMESPACE := mmguero
 PROJECT := dockeryourxyzzy
 PLATFORM := linux
 ARCH := amd64
