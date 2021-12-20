@@ -18,12 +18,11 @@ RUN apk add --no-cache curl tar procps \
 
 # PYX
 ADD scripts/default.sh scripts/overrides.sh /
-ENV GIT_BRANCH kidfriendly
+ENV GIT_BRANCH familyfriendly
 
 RUN apk add dos2unix git --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted \
   && dos2unix /default.sh /overrides.sh \
   && git clone -b $GIT_BRANCH https://github.com/mmguero/PretendYoureXyzzy.git /project \
-  && cp -f /project/pyx_family.sqlite /project/pyx.sqlite \
   && apk del dos2unix git \
   && chmod +x /default.sh /overrides.sh \
   && mkdir /overrides
