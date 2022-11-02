@@ -1,5 +1,5 @@
 ---
-name: capa-build-push-ghcr
+name: docker-publish
 
 on:
   push:
