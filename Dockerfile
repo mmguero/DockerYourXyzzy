@@ -1,9 +1,9 @@
 FROM davidcaste/alpine-tomcat:jdk8tomcat7
 
 # MAVEN
-ENV MAVEN_VERSION 3.5.4
+ENV MAVEN_VERSION 3.9.3
 ENV USER_HOME_DIR /root
-ENV SHA ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d
+ENV SHA e1e13ac0c42f3b64d900c57ffc652ecef682b8255d7d354efbbb4f62519da4f1
 ENV BASE_URL https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
