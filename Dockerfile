@@ -20,10 +20,10 @@ RUN apk add --no-cache curl tar procps \
 ADD scripts/default.sh scripts/overrides.sh /
 ENV GIT_BRANCH familyfriendly
 
-RUN apk add dos2unix git --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted \
-  && dos2unix /default.sh /overrides.sh \
+RUN set -x \
+  && apk add git --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted \
   && git clone -b $GIT_BRANCH https://github.com/mmguero/PretendYoureXyzzy.git /project \
-  && apk del dos2unix git \
+  && apk del git \
   && chmod +x /default.sh /overrides.sh \
   && mkdir /overrides
 
