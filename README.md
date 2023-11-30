@@ -2,7 +2,7 @@
 
 ![docker publish](https://github.com/mmguero/DockerYourXyzzy/workflows/Publish%20Docker/badge.svg)
 
-Get your Xyzzy on: `docker pull ghcr.io/mmguero/dockeryourxyzzy`
+Get your Xyzzy on: `docker pull oci.guero.top/dockeryourxyzzy`
 
 - Github: [mmguero/DockerYourXyzzy](https://github.com/mmguero/DockerYourXyzzy)
 
@@ -47,7 +47,7 @@ Keep the container up with SQLite and `war:exploded jetty:run`:
 docker run -d \
   -p 8080:8080 \
   --name pyx-dev \
-  ghcr.io/mmguero/dockeryourxyzzy:latest
+  oci.guero.top/dockeryourxyzzy:latest
 
 # Visit http://localhost:8080 in your browser
 # Or, start a bash session within the container:
@@ -62,7 +62,7 @@ Settings in `build.properties` can be modified by passing them in the container 
 ```sh
 docker run -d \
   -p 8080:8080 \
-  ghcr.io/mmguero/dockeryourxyzzy:latest \
+  oci.guero.top/dockeryourxyzzy:latest \
   mvn clean package war:war \
     -Dhttps.protocols=TLSv1.2 \
     -Dmaven.buildNumber.doCheck=false \
@@ -75,7 +75,7 @@ Also are able to do more complex overrides by making a copy of [build.properties
 docker run -d \
   -p 8080:8080 \
   -v $(pwd)/build.properties:/overrides/build.properties \
-  ghcr.io/mmguero/dockeryourxyzzy:latest
+  oci.guero.top/dockeryourxyzzy:latest
 ```
 
 
