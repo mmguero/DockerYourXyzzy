@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   pyx:
-    image: oci.guero.top/dockeryourxyzzy:latest
+    image: oci.guero.org/dockeryourxyzzy:latest
     build: ./
     ports:
      - "8080:8080"
